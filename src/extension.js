@@ -8,7 +8,7 @@ const IGNORE_EXT = new Array('bmp', 'jpg', 'jpeg', 'png', 'gif', 'mp3', 'mp4', '
 
 function formatCurrentFile() {
   return new Promise((resolve, reject) => {
-    vscode.commands.executeCommand('editor.action.formatDocument').then(() => {
+    vscode.commands.executeCommand('trailing-spaces.deleteTrailingSpaces').then(() => {
       vscode.commands.executeCommand('workbench.action.nextEditor').then(() => {
         resolve();
       });
@@ -54,7 +54,7 @@ function getFiles(rootPath, callback) {
 }
 
 function activate(context) {
-  let disposable = vscode.commands.registerCommand('extension.batchFormatFiles', function () {
+  let disposable = vscode.commands.registerCommand('extension.batchTrailingSpacesFiles', function () {
     let counter = 0;
     getFiles(ROOT_PATH, url => {
       counter++;
