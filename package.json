@@ -1,9 +1,9 @@
 {
-    "name": "batch-format",
-    "displayName": "batch format",
-    "description": "batch format files",
-    "version": "0.3.3",
-    "publisher": "zhaofinger",
+    "name": "batch-trailingspaces",
+    "displayName": "batch trailing spaces",
+    "description": "batch trailing spaces",
+    "version": "0.1.0",
+    "publisher": "gpedro",
     "engines": {
         "vscode": "^1.22.0"
     },
@@ -12,14 +12,14 @@
     ],
     "icon": "logo.png",
     "activationEvents": [
-        "onCommand:extension.batchFormatFiles"
+        "onCommand:extension.batchTrailingSpacesFiles"
     ],
     "main": "./src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.batchFormatFiles",
-                "title": "batch format"
+                "command": "extension.batchTrailingSpacesFiles",
+                "title": "batch trailing spaces"
             }
         ]
     },
